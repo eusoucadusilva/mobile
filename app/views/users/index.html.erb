@@ -1,0 +1,90 @@
+<%- model_class = User.new.class -%>
+<h1><%=t '.title', :default => model_class.model_name.human.pluralize %></h1>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th><%= model_class.human_attribute_name(:id) %></th>
+      <th><%= model_class.human_attribute_name(:lessor) %></th>
+      <th><%= model_class.human_attribute_name(:lessor_address) %></th>
+      <th><%= model_class.human_attribute_name(:lessor_city) %></th>
+      <th><%= model_class.human_attribute_name(:lessor_cep) %></th>
+      <th><%= model_class.human_attribute_name(:lessor_district) %></th>
+      <th><%= model_class.human_attribute_name(:lessor_state) %></th>
+      <th><%= model_class.human_attribute_name(:lessor_cnpj) %></th>
+      <th><%= model_class.human_attribute_name(:lessee) %></th>
+      <th><%= model_class.human_attribute_name(:lessee_address) %></th>
+      <th><%= model_class.human_attribute_name(:lessee_city) %></th>
+      <th><%= model_class.human_attribute_name(:lessee_cep) %></th>
+      <th><%= model_class.human_attribute_name(:lessee_district) %></th>
+      <th><%= model_class.human_attribute_name(:lessee_state) %></th>
+      <th><%= model_class.human_attribute_name(:lessee_cnpj) %></th>
+      <th><%= model_class.human_attribute_name(:debtor) %></th>
+      <th><%= model_class.human_attribute_name(:debtor_address) %></th>
+      <th><%= model_class.human_attribute_name(:debtor_city) %></th>
+      <th><%= model_class.human_attribute_name(:debtor_cep) %></th>
+      <th><%= model_class.human_attribute_name(:debtor_district) %></th>
+      <th><%= model_class.human_attribute_name(:debtor_state) %></th>
+      <th><%= model_class.human_attribute_name(:debtor_cnpj) %></th>
+      <th><%= model_class.human_attribute_name(:depositary) %></th>
+      <th><%= model_class.human_attribute_name(:depositary_address) %></th>
+      <th><%= model_class.human_attribute_name(:depositary_city) %></th>
+      <th><%= model_class.human_attribute_name(:depositary_cep) %></th>
+      <th><%= model_class.human_attribute_name(:depositary_district) %></th>
+      <th><%= model_class.human_attribute_name(:depositary_state) %></th>
+      <th><%= model_class.human_attribute_name(:depositary_cnpj) %></th>
+      <th><%= model_class.human_attribute_name(:goods) %></th>
+      <th><%= model_class.human_attribute_name(:created_at) %></th>
+      <th><%=t '.actions', :default => t("helpers.actions") %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @users.each do |user| %>
+      <tr>
+        <td><%= link_to user.id, user_path(user) %></td>
+        <td><%= user.lessor %></td>
+        <td><%= user.lessor_address %></td>
+        <td><%= user.lessor_city %></td>
+        <td><%= user.lessor_cep %></td>
+        <td><%= user.lessor_district %></td>
+        <td><%= user.lessor_state %></td>
+        <td><%= user.lessor_cnpj %></td>
+        <td><%= user.lessee %></td>
+        <td><%= user.lessee_address %></td>
+        <td><%= user.lessee_city %></td>
+        <td><%= user.lessee_cep %></td>
+        <td><%= user.lessee_district %></td>
+        <td><%= user.lessee_state %></td>
+        <td><%= user.lessee_cnpj %></td>
+        <td><%= user.debtor %></td>
+        <td><%= user.debtor_address %></td>
+        <td><%= user.debtor_city %></td>
+        <td><%= user.debtor_cep %></td>
+        <td><%= user.debtor_district %></td>
+        <td><%= user.debtor_state %></td>
+        <td><%= user.debtor_cnpj %></td>
+        <td><%= user.depositary %></td>
+        <td><%= user.depositary_address %></td>
+        <td><%= user.depositary_city %></td>
+        <td><%= user.depositary_cep %></td>
+        <td><%= user.depositary_district %></td>
+        <td><%= user.depositary_state %></td>
+        <td><%= user.depositary_cnpj %></td>
+        <td><%= user.goods %></td>
+        <td><%=l user.created_at %></td>
+        <td>
+          <%= link_to t('.edit', :default => t("helpers.links.edit")),
+                      edit_user_path(user), :class => 'btn btn-mini' %>
+          <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+                      user_path(user),
+                      :method => :delete,
+                      :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')),
+                      :class => 'btn btn-mini btn-danger' %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to t('.new', :default => t("helpers.links.new")),
+            new_user_path,
+            :class => 'btn btn-primary' %>

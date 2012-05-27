@@ -1,0 +1,58 @@
+<%= simple_form_for @user, :html => { :class => 'form-horizontal' } do |f| %>
+
+
+<fieldset>
+  <legend>lessor</legend>
+  <%= f.input :lessor %>
+  <%= f.input :lessor_address %>
+  <%= f.input :lessor_city %>
+  <%= f.input :lessor_cep %>
+  <%= f.input :lessor_district %>
+  <%= f.input :lessor_state %>
+  <%= f.input :lessor_cnpj %>
+</fieldset>
+
+<fieldset>
+  <legend>lessor</legend>
+  <%= f.input :lessee %>
+  <%= f.input :lessee_address %>
+  <%= f.input :lessee_city %>
+  <%= f.input :lessee_cep %>
+  <%= f.input :lessee_district %>
+  <%= f.input :lessee_state %>
+  <%= f.input :lessee_cnpj %>
+</fieldset>
+
+<fieldset>
+  <legend>debtor</legend>
+  <%= f.input :debtor %>
+  <%= f.input :debtor_address %>
+  <%= f.input :debtor_city %>
+  <%= f.input :debtor_cep %>
+  <%= f.input :debtor_district %>
+  <%= f.input :debtor_state %>
+  <%= f.input :debtor_cnpj %>
+</fieldset>
+
+<fieldset>
+  <legend>depositary</legend>
+  <%= f.input :depositary %>
+  <%= f.input :depositary_address %>
+  <%= f.input :depositary_city %>
+  <%= f.input :depositary_cep %>
+  <%= f.input :depositary_district %>
+  <%= f.input :depositary_state %>
+  <%= f.input :depositary_cnpj %>
+</fieldset>
+
+<fieldset>
+  <legend>Bens</legend>
+  <%= f.input :goods %>
+</fieldset>
+
+  <div class="form-actions">
+    <%= f.button :submit, :class => 'btn-primary' %>
+    <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                users_path, :class => 'btn' %>
+  </div>
+<% end %>
