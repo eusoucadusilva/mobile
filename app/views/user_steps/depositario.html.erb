@@ -1,0 +1,17 @@
+<%= render layout: 'form' do |f| %>
+<fieldset>
+  <legend>Fiel Depositário</legend>
+  <%= f.input :depositary %>
+  <%= f.input :depositary_address %>
+  <%= f.input :depositary_city %>
+  <%= f.input :depositary_cep %>
+  <%= f.input :depositary_district %>
+  <%= f.input :depositary_state %>
+  <%= f.input :depositary_cnpj %>
+</fieldset>
+
+<fieldset>
+  <legend>Bens</legend>
+  <%= f.input :goods %>
+</fieldset>
+<% end %>

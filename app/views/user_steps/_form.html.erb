@@ -1,0 +1,10 @@
+<%= simple_form_for @user, url: wizard_path, :html => { :class => 'form-horizontal' } do |f| %>
+
+<%= yield f %>
+
+<div class="form-actions">
+  <%= f.button :submit,  t("helpers.links.continue"), :class => 'btn-primary' %>
+  ou <%= link_to t("helpers.links.skip"), next_wizard_path, :class => 'btn' %>
+</div>
+  
+  <% end %>

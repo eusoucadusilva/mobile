@@ -1,0 +1,8 @@
+pt-BR:
+  helpers:
+    links:
+      continue: "Continuar"
+      skip: "Pular Preenchimento"
+      cancel: "Cancelar"
+      user:
+        create: "Efetuar Cadastro"

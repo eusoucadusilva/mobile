@@ -1,5 +1,5 @@
 Mobile::Application.routes.draw do
-  root :to => "users#index"
-  
-  resources :users
+  resources :users, :path => "usuarios"
+  resources :user_steps, :path => "usuarios-passos"
+  root to: 'users#index'
 end

@@ -3,40 +3,40 @@ class CreateUsers < ActiveRecord::Migration
     create_table :users do |t|
       
       # arrendadora
-      t.string  :lessor,          :null => false
-      t.string  :lessor_address,  :null => false
-      t.string  :lessor_city,     :null => false
-      t.string  :lessor_cep,      :null => false
-      t.string  :lessor_district, :null => false
-      t.string  :lessor_state,    :null => false
-      t.string  :lessor_cnpj,     :null => false
+      t.string  :lessor
+      t.string  :lessor_address
+      t.string  :lessor_city
+      t.string  :lessor_cep
+      t.string  :lessor_district
+      t.string  :lessor_state
+      t.string  :lessor_cnpj
       
       # arrendataria
-      t.string  :lessee,          :null => false
-      t.string  :lessee_address,  :null => false
-      t.string  :lessee_city,     :null => false
-      t.string  :lessee_cep,      :null => false
-      t.string  :lessee_district, :null => false
-      t.string  :lessee_state,    :null => false
-      t.string  :lessee_cnpj,     :null => false
+      t.string  :lessee
+      t.string  :lessee_address
+      t.string  :lessee_city
+      t.string  :lessee_cep
+      t.string  :lessee_district
+      t.string  :lessee_state
+      t.string  :lessee_cnpj
       
       #devedor solidario
-      t.string  :debtor,          :null => false
-      t.string  :debtor_address,  :null => false
-      t.string  :debtor_city,     :null => false
-      t.string  :debtor_cep,      :null => false
-      t.string  :debtor_district, :null => false
-      t.string  :debtor_state,    :null => false
-      t.string  :debtor_cnpj,     :null => false
+      t.string  :debtor
+      t.string  :debtor_address
+      t.string  :debtor_city
+      t.string  :debtor_cep
+      t.string  :debtor_district
+      t.string  :debtor_state
+      t.string  :debtor_cnpj
       
       #fiel depositario
       t.string  :depositary
-      t.string  :depositary_address,  :null => false
-      t.string  :depositary_city,     :null => false
-      t.string  :depositary_cep,      :null => false
-      t.string  :depositary_district, :null => false
-      t.string  :depositary_state,    :null => false
-      t.string  :depositary_cnpj,     :null => false
+      t.string  :depositary_address
+      t.string  :depositary_city
+      t.string  :depositary_cep
+      t.string  :depositary_district
+      t.string  :depositary_state
+      t.string  :depositary_cnpj
       
       #Bens
       t.string  :goods
@@ -46,5 +46,6 @@ class CreateUsers < ActiveRecord::Migration
   end
 
   def self.down
+    drop_table :users
   end
 end
