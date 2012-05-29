@@ -1,7 +1,6 @@
 source "https://rubygems.org"
 
 gem "rails", "3.2.3"
-gem "sqlite3"
 gem "simple_form"
 gem "wicked"
 gem "mysql2"
@@ -17,6 +16,7 @@ end
 gem "jquery-rails"
 
 group :development do
+  gem "sqlite3"
   gem "pry",            :require => false
   gem "awesome_print",  :require => false
   gem "capistrano"
