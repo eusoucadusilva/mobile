@@ -1,122 +1,34 @@
 <%- model_class = @user.class -%>
-<h1><%=t '.title', :default => model_class.model_name.human %></h1>
 
-<p>
-  <strong><%= model_class.human_attribute_name(:lessor) %>:</strong><br>
-  <%= @user.lessor %>
-</p>
-<p>
-  <strong><%= model_class.human_attribute_name(:lessor_address) %>:</strong><br>
-  <%= @user.lessor_address %>
-</p>
-<p>
-  <strong><%= model_class.human_attribute_name(:lessor_city) %>:</strong><br>
-  <%= @user.lessor_city %>
-</p>
-<p>
-  <strong><%= model_class.human_attribute_name(:lessor_cep) %>:</strong><br>
-  <%= @user.lessor_cep %>
-</p>
-<p>
-  <strong><%= model_class.human_attribute_name(:lessor_district) %>:</strong><br>
-  <%= @user.lessor_district %>
-</p>
-<p>
-  <strong><%= model_class.human_attribute_name(:lessor_state) %>:</strong><br>
-  <%= @user.lessor_state %>
-</p>
-<p>
-  <strong><%= model_class.human_attribute_name(:lessor_cnpj) %>:</strong><br>
-  <%= @user.lessor_cnpj %>
-</p>
-<p>
-  <strong><%= model_class.human_attribute_name(:lessee) %>:</strong><br>
-  <%= @user.lessee %>
-</p>
-<p>
-  <strong><%= model_class.human_attribute_name(:lessee_address) %>:</strong><br>
-  <%= @user.lessee_address %>
-</p>
-<p>
-  <strong><%= model_class.human_attribute_name(:lessee_city) %>:</strong><br>
-  <%= @user.lessee_city %>
-</p>
-<p>
-  <strong><%= model_class.human_attribute_name(:lessee_cep) %>:</strong><br>
-  <%= @user.lessee_cep %>
-</p>
-<p>
-  <strong><%= model_class.human_attribute_name(:lessee_district) %>:</strong><br>
-  <%= @user.lessee_district %>
-</p>
-<p>
-  <strong><%= model_class.human_attribute_name(:lessee_state) %>:</strong><br>
-  <%= @user.lessee_state %>
-</p>
-<p>
-  <strong><%= model_class.human_attribute_name(:lessee_cnpj) %>:</strong><br>
-  <%= @user.lessee_cnpj %>
-</p>
-<p>
-  <strong><%= model_class.human_attribute_name(:debtor) %>:</strong><br>
-  <%= @user.debtor %>
-</p>
-<p>
-  <strong><%= model_class.human_attribute_name(:debtor_address) %>:</strong><br>
-  <%= @user.debtor_address %>
-</p>
-<p>
-  <strong><%= model_class.human_attribute_name(:debtor_city) %>:</strong><br>
-  <%= @user.debtor_city %>
-</p>
-<p>
-  <strong><%= model_class.human_attribute_name(:debtor_cep) %>:</strong><br>
-  <%= @user.debtor_cep %>
-</p>
-<p>
-  <strong><%= model_class.human_attribute_name(:debtor_district) %>:</strong><br>
-  <%= @user.debtor_district %>
-</p>
-<p>
-  <strong><%= model_class.human_attribute_name(:debtor_state) %>:</strong><br>
-  <%= @user.debtor_state %>
-</p>
-<p>
-  <strong><%= model_class.human_attribute_name(:debtor_cnpj) %>:</strong><br>
-  <%= @user.debtor_cnpj %>
-</p>
-<p>
-  <strong><%= model_class.human_attribute_name(:depositary) %>:</strong><br>
-  <%= @user.depositary %>
-</p>
-<p>
-  <strong><%= model_class.human_attribute_name(:depositary_address) %>:</strong><br>
-  <%= @user.depositary_address %>
-</p>
-<p>
-  <strong><%= model_class.human_attribute_name(:depositary_city) %>:</strong><br>
-  <%= @user.depositary_city %>
-</p>
-<p>
-  <strong><%= model_class.human_attribute_name(:depositary_cep) %>:</strong><br>
-  <%= @user.depositary_cep %>
-</p>
-<p>
-  <strong><%= model_class.human_attribute_name(:depositary_district) %>:</strong><br>
-  <%= @user.depositary_district %>
-</p>
-<p>
-  <strong><%= model_class.human_attribute_name(:depositary_state) %>:</strong><br>
-  <%= @user.depositary_state %>
-</p>
-<p>
-  <strong><%= model_class.human_attribute_name(:depositary_cnpj) %>:</strong><br>
-  <%= @user.depositary_cnpj %>
-</p>
-<p>
-  <strong><%= model_class.human_attribute_name(:goods) %>:</strong><br>
-  <%= @user.goods %>
-</p>
+
+<ul class="nav nav-tabs" id="myTab">
+  <li class="active"><a href="#arrendadora">Arrendadora</a></li>
+  <li><a href="#arrendataria">Arrendatária</a></li>
+  <li><a href="#devedor">Devedor Solidário</a></li>
+  <li><a href="#devedor2">Devedor Solidário</a></li>
+  <li><a href="#depositario">Fiel Depositário</a></li>
+</ul>
+ 
+<div class="tab-content">
+  <div class="tab-pane active" id="arrendadora">
+    A
+  </div>
+  <div class="tab-pane" id="arrendataria">
+    B
+  </div>
+  <div class="tab-pane" id="devedor">
+    C
+  </div>
+  <div class="tab-pane" id="devedor2">
+    D
+  </div>
+  <div class="tab-pane" id="depositario">
+    DADDADAD
+  </div>
+</div>
+ 
+
+
 
 <div class="form-actions">
   <%= link_to t('.back', :default => t("helpers.links.back")),

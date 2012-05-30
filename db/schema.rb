@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120527140700) do
+ActiveRecord::Schema.define(:version => 20120530001843) do
 
   create_table "users", :force => true do |t|
     t.string   "lessor"
@@ -45,6 +45,13 @@ ActiveRecord::Schema.define(:version => 20120527140700) do
     t.string   "goods"
     t.datetime "created_at",          :null => false
     t.datetime "updated_at",          :null => false
+    t.string   "debtor2"
+    t.string   "debtor2_address"
+    t.string   "debtor2_city"
+    t.string   "debtor2_cep"
+    t.string   "debtor2_district"
+    t.string   "debtor2_state"
+    t.string   "debtor2_cnpj"
   end
 
 end

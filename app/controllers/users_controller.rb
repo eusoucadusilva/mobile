@@ -32,6 +32,9 @@ class UsersController < ApplicationController
   end
   
   def destroy
+    @user = User.find(params[:id])
     
+    @user.destroy
+    redirect_to root_path, notice: "Apagado com Sucesso"
   end
 end

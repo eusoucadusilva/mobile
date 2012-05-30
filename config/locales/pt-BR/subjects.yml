@@ -3,6 +3,9 @@ pt-BR:
     links:
       continue: "Continuar"
       skip: "Pular Preenchimento"
+      edit: "Editar"
+      back: "Voltar"
+      destroy: "Deletar"
       cancel: "Cancelar"
       user:
         create: "Efetuar Cadastro"

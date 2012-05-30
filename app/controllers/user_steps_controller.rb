@@ -1,6 +1,6 @@
 class UserStepsController < ApplicationController
   include Wicked::Wizard
-  steps :arrendataria, :devedor, :depositario
+  steps :arrendataria, :devedor, :devedor2, :depositario
   
   
   def show
@@ -17,6 +17,6 @@ class UserStepsController < ApplicationController
 private
 
   def redirect_to_finish_wizard
-    redirect_to root_url, notice: "Thank you for signing up."
+    redirect_to user_path(@user), notice: "Cadastrado com Sucesso"
   end
 end

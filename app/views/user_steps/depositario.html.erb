@@ -11,7 +11,7 @@
 </fieldset>
 
 <fieldset>
-  <legend>Bens</legend>
-  <%= f.input :goods %>
+  <legend>Descrição dos Bens</legend>
+  <%= f.input :goods, :collection => User::GOODS, :prompt => "Por favor selecione" %>
 </fieldset>
 <% end %>
