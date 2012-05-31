@@ -1,11 +1,12 @@
 pt-BR:
   helpers:
     links:
-      continue: "Continuar"
+      new: "Novo Cadastro"
+      continue: "Continuar Cadastro"
       skip: "Pular Preenchimento"
       edit: "Editar"
       back: "Voltar"
       destroy: "Deletar"
       cancel: "Cancelar"
       user:
-        create: "Efetuar Cadastro"
+        create: "Cadastrar"

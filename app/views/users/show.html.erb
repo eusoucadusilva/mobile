@@ -11,19 +11,50 @@
  
 <div class="tab-content">
   <div class="tab-pane active" id="arrendadora">
-    A
+    <p><strong>Arrendadora: </strong> <%= @user.lessor %></p>
+    <p><strong>Endereço: </strong>    <%= @user.lessor_address %></p>
+    <p><strong>Cidade: </strong>      <%= @user.lessor_city %></p>
+    <p><strong>CEP: </strong>         <%= @user.lessor_cep %></p>
+    <p><strong>Bairro: </strong>      <%= @user.lessor_district %></p>
+    <p><strong>Estado: </strong>      <%= @user.lessor_state %></p>
+    <p><strong>CNPJ / MF: </strong>   <%= @user.lessor_cnpj %></p>
   </div>
   <div class="tab-pane" id="arrendataria">
-    B
+    <p><strong>Arrendatária: </strong><%= @user.lessee %></p>
+    <p><strong>Endereço: </strong>    <%= @user.lessee_address %></p>
+    <p><strong>Cidade: </strong>      <%= @user.lessee_city %></p>
+    <p><strong>CEP: </strong>         <%= @user.lessee_cep %></p>
+    <p><strong>Bairro: </strong>      <%= @user.lessee_district %></p>
+    <p><strong>Estado: </strong>      <%= @user.lessee_state %></p>
+    <p><strong>CNPJ / MF: </strong>   <%= @user.lessee_cnpj %></p>
   </div>
   <div class="tab-pane" id="devedor">
-    C
+    <p><strong>Devedor Solidário: </strong> <%= @user.debtor %></p>
+    <p><strong>Endereço: </strong>          <%= @user.debtor_address %></p>
+    <p><strong>Cidade: </strong>            <%= @user.debtor_city %></p>
+    <p><strong>CEP: </strong>               <%= @user.debtor_cep %></p>
+    <p><strong>Bairro: </strong>            <%= @user.debtor_district %></p>
+    <p><strong>Estado: </strong>            <%= @user.debtor_state %></p>
+    <p><strong>CNPJ / MF: </strong>         <%= @user.debtor_cnpj %></p>
   </div>
   <div class="tab-pane" id="devedor2">
-    D
+    <p><strong>Devedor Solidário: </strong> <%= @user.debtor2 %></p>
+    <p><strong>Endereço: </strong>          <%= @user.debtor2_address %></p>
+    <p><strong>Cidade: </strong>            <%= @user.debtor2_city %></p>
+    <p><strong>CEP: </strong>               <%= @user.debtor2_cep %></p>
+    <p><strong>Bairro: </strong>            <%= @user.debtor2_district %></p>
+    <p><strong>Estado: </strong>            <%= @user.debtor2_state %></p>
+    <p><strong>CNPJ / MF: </strong>         <%= @user.debtor2_cnpj %></p>
   </div>
   <div class="tab-pane" id="depositario">
-    DADDADAD
+    <p><strong>Fiel Depositário: </strong>  <%= @user.depositary %></p>
+    <p><strong>Endereço: </strong>          <%= @user.depositary_address %></p>
+    <p><strong>Cidade: </strong>            <%= @user.depositary_city %></p>
+    <p><strong>CEP: </strong>               <%= @user.depositary_cep %></p>
+    <p><strong>Bairro: </strong>            <%= @user.depositary_district %></p>
+    <p><strong>Estado: </strong>            <%= @user.depositary_state %></p>
+    <p><strong>CNPJ / MF: </strong>         <%= @user.depositary_cnpj %></p>
+    <p><strong>Descrição dos Bens: </strong><%= @user.goods %></p>
   </div>
 </div>
  
@@ -33,8 +64,6 @@
 <div class="form-actions">
   <%= link_to t('.back', :default => t("helpers.links.back")),
               users_path, :class => 'btn'  %>
-  <%= link_to t('.edit', :default => t("helpers.links.edit")),
-              edit_user_path(@user), :class => 'btn' %>
   <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
               user_path(@user),
               :method => 'delete',

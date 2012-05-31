@@ -13,7 +13,14 @@
 //= require jquery
 //= require jquery_ujs
 //= require twitter/bootstrap
+//= require jquery.maskedinput
 //= require_tree .
+
+jQuery(function($){
+   $("#user_lessor_cnpj, #user_lessee_cnpj, #user_debtor_cnpj, #user_debtor2_cnpj, #user_depositary_cnpj").mask("99.999.999/9999-99");
+   $("#user_lessor_cep, #user_lessee_cep, #user_debtor_cep, #user_debtor2_cep, #user_depositary_cep").mask("99999-999");
+});
+
 
 $('#myTab a').click(function (e) {
   e.preventDefault();

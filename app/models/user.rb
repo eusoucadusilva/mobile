@@ -9,7 +9,7 @@ class User < ActiveRecord::Base
                 
   validates_presence_of :lessor, :lessor_address, :lessor_city, :lessor_district, :lessor_state, :lessor_cnpj, :lessor_cep
                           
-    
+  
     
   
   
